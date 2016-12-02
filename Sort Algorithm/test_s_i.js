@@ -96,3 +96,51 @@ function t2(count) {
 
 }
 
+
+function t3(count) {
+	var start = new Date();
+
+	for(var j=0;j<count;j++) {
+		function rd() {
+			return Math.floor(Math.random()*100);
+		}
+		var arr=[];
+		while(arr.length<100) {
+			var aa=rd();
+			var f=true;
+			for(var i=0;i<arr.length;i++){
+				if(arr[i]==aa){
+					f=false;
+					break;
+				} else {
+					f=true;
+				}
+				
+			} 
+			if(f) {
+				arr.push(aa)
+			}
+		}
+
+		function shell_sort(arr) {
+			var len = arr.length;
+			for(var f = Math.floor(len/2); f > 0; f = Math.floor(f/2)) {
+				for(var i = f; i < len; i++) {
+					for(var j = i-f; j >= 0 && arr[j] > arr[f+j]; j-=f) {
+						var temp = arr[j];
+						arr[j] = arr[f+j];
+						arr[f+j] = temp;
+					};
+				};
+			};
+		};
+
+		shell_sort(arr);
+	}
+	var end = new Date();
+	var data = end.getTime() - start.getTime()
+	console.log('希尔排序运行时间：'+ data + ' 毫秒')
+
+}
+
+
