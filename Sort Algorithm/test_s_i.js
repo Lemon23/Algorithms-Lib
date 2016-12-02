@@ -1,3 +1,12 @@
+/*
+ *  测试排序算法对于随机数数组的运行时间
+ *  生成 100 位的随机数组，数组内每个元素为 0-100 的随机数
+ */
+
+
+/*
+ *  插入排序的运行时间
+ */
 function t1(count) {
 	var start = new Date();
 
@@ -46,7 +55,9 @@ function t1(count) {
 
 }
 
-
+/*
+ *  选择排序的运行时间
+ */
 function t2(count) {
 	var start = new Date();
 
@@ -96,7 +107,9 @@ function t2(count) {
 
 }
 
-
+/*
+ *  希尔排序的运行时间
+ */
 function t3(count) {
 	var start = new Date();
 
