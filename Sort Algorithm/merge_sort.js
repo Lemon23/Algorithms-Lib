@@ -17,16 +17,16 @@ function merge(left, right) {
 	var result = [];
 	while(left.length > 0 && right.length > 0) {
 		if(left[0] < right[0]) {
-			// console.log('1----' + result + ' left: ' + left + ' right: ' + right)
+			console.log('1---- result:' + result + ' left: ' + left + ' right: ' + right + ' arr:' + arr)
 			result.push(left.shift())
 		} else {
-			// console.log('2----' + result + ' left: ' + left + ' right: ' + right)
+			console.log('2---- result:' + result + ' left: ' + left + ' right: ' + right + ' arr:' + arr)
 			result.push(right.shift())
 		}
 	}
-	// console.log('3-----' + result)
+	console.log('3----- result:' + result + ' left: ' + left + ' right: ' + right + ' arr:' + arr)
 	return result.concat(left).concat(right);
 }
 
-var arr = [2,4,6,8,3,5,7,9]
+var arr = [5,2,4,7,1,3,2,6]
 merge_sort(arr)
